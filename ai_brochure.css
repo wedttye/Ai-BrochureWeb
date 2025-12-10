@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif; 
+    margin: 10px 10px 10px 10px; 
+    padding: 1px;
+    padding-bottom: 3px;
+    background: #e0e0e0; 
+    display: flex; 
+    justify-content: center;
+    min-height: min-content;
+}
+
+.front-image {
+    display: block;
+    width: 80; 
+    max-width: 250px;
+    margin: 15px auto; 
+    border-radius: 8px;
+}
+
+.brochure-container { 
+    width: 400px; 
+    margin: 5px; 
+    height: 50px;
+}
+
+.brochure-carousel {
+    position: relative;
+    overflow: 10px 10px;
+    height: auto;
+}
+
+.brochure { 
+    width: 50px;
+    max-width: 500px;
+    margin: 20px auto;
+    display: grid;
+    gap: 20px;
+    flex-wrap: warp;
+    background: #ffffff; 
+    padding: -20px;
+    border-radius: 100px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+}
+
+.panel.front:first-child {
+   min-height: 800px;
+}
+
+.panel { 
+    display: none; 
+    padding: 20px; 
+    background: #f4f4f4;
+    border-radius: 8px;
+    border: 1px solid #d0d0d0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-height: 850px; 
+}
+
+.panel.active {
+    display: block; 
+}
+
+.buttons {
+    margin-top: 10px; 
+}
+
+button {
+    padding: 8px 15px; 
+    margin: 5px 5px; 
+    border: none; 
+    background: #333; 
+    color: white; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+button:hover {
+    background: #555; 
+}
+
+.panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+h2, h3 {
+    margin-top: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+p {
+    line-height: 1.5; 
+}
+
+/* ---------------------------- */
+/*      FULL VIEW MODE (NEW)    */
+/* ---------------------------- */
+
+/* Makes all panels horizontal instead of stacked */
+.brochure-carousel.full-view {
+    display: flex;
+    gap: 10px;
+    width: 50%;
+}
+
+
+
+/* Makes panels appear side-by-side */
+.brochure-carousel.full-view .panel {
+    display: block !important;
+    min-width: 350px;
+    height: 1050px;
+    
+}
+
+/* Keep your existing theme colors */
+.brochure-carousel.full-view .panel.front {
+    background: #f4f4f4;
+}
+
+.brochure-carousel.full-view .panel.back {
+    background: #e8e8e8;
+}
+
+/* Ensures front panel stays tall */
+.brochure-carousel.full-view .panel.front:first-child {
+    height: 1000px;
+}
+
+
+
+
